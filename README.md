@@ -82,9 +82,6 @@ python run_pipeline.py
 pytest -q
 ```
 
-## Power BI
-Create `powerbi/ASG_Airlines.pbix` in Power BI Desktop using the curated outputs. Add screenshots for all four pages to `powerbi/screenshots/`.
-
 ## Production evolution
 The current implementation is deliberately reproducible with Python/pandas and SQL. At production scale, the same contracts can be moved to Azure Data Factory for orchestration, ADLS Gen2 for storage, Databricks/Spark for distributed transformation, and a warehouse/lakehouse for serving.
 
