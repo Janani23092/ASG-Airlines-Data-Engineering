@@ -2,8 +2,6 @@
 
 A reproducible airline data-engineering pipeline that ingests operational flight data, validates data quality, quarantines hard failures, standardises timestamps and routes, handles overnight flights, produces a curated analytical model, and exposes KPIs for Power BI.
 
-> **Public-repository safety:** the original source workbook and raw passenger/booking/payment extracts are intentionally excluded because they contain sensitive-looking fields. A synthetic sample is provided so the pipeline can be executed end-to-end.
-
 ## Solution
 
 ```text
