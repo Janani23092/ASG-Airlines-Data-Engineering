@@ -83,7 +83,3 @@ pytest -q
 ## Production evolution
 The current implementation is deliberately reproducible with Python/pandas and SQL. At production scale, the same contracts can be moved to Azure Data Factory for orchestration, ADLS Gen2 for storage, Databricks/Spark for distributed transformation, and a warehouse/lakehouse for serving.
 
-## Assumptions & limitations
-- Validation thresholds are dataset-informed and documented rather than universal aviation rules.
-- Overnight logic respects full datetime values when supplied and defensively rolls a negative time-only gap forward by one day.
-- Passenger/booking/payment PII is not required for the core flight KPIs and is protected before analytical use.
