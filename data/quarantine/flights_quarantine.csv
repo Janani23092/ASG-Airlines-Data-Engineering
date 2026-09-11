@@ -1,0 +1,2 @@
+row_ref,flight_id,airline,source,destination,departure_time,arrival_time,reason_description
+84,AI242,UNKNOWN,BLR,CCU,2026-04-20 16:41:41.704,2026-04-20 17:43:41.704,DUPLICATE_RECORD

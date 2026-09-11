@@ -1,0 +1,22 @@
+# Raw/source files (may contain PII)
+data/raw/
+
+# Power BI local binaries
+*.pbix
+*.pbit
+
+# Python caches / notebooks
+__pycache__/
+*.py[cod]
+.ipynb_checkpoints/
+.pytest_cache/
+.venv/
+venv/
+
+# Secrets
+.env
+*.env
+
+# OS files
+.DS_Store
+Thumbs.db

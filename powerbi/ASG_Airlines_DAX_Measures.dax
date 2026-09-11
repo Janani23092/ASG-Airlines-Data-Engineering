@@ -1,0 +1,36 @@
+-- ASG Airlines Power BI measures
+-- Import dq_metrics.csv as DQMetrics and record_quality_summary.csv as RecordQuality.
+
+Total Flights = DISTINCTCOUNT(FactFlights[flight_id])
+
+Average Flight Duration = AVERAGE(FactFlights[duration_minutes])
+
+Overnight Flights =
+CALCULATE([Total Flights], FactFlights[is_overnight] = TRUE())
+
+Overnight % =
+DIVIDE([Overnight Flights], [Total Flights], 0)
+
+Anomalies =
+CALCULATE([Total Flights], FactFlights[anomaly_flag] = "ANOMALY")
+
+Anomaly % =
+DIVIDE([Anomalies], [Total Flights], 0)
+
+Quarantined Flights =
+COUNTROWS(Quarantine)
+
+Data Quality Score =
+MAX(DQMetrics[dq_score])
+
+Valid Records =
+CALCULATE(SUM(RecordQuality[record_count]), RecordQuality[status] = "VALID")
+
+Invalid Records =
+CALCULATE(SUM(RecordQuality[record_count]), RecordQuality[status] = "INVALID")
+
+Confirmed Revenue =
+CALCULATE(
+    SUM(FactPayments[amount]),
+    FactBookings[status] = "CONFIRMED"
+)

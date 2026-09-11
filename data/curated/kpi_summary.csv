@@ -1,0 +1,11 @@
+kpi,value
+Input Flights,100
+Total Flights,99
+Average Flight Duration (min),140.93
+Overnight Flights,29
+Overnight Flight Share (%),29.29
+Anomalies,9
+Anomaly Rate (%),9.09
+Quarantined Flights,1
+Data Quality Score (%),99.0
+Reconciliation,PASS

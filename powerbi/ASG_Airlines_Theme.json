@@ -1,0 +1,7 @@
+{
+  "name": "ASG Airlines Professional",
+  "dataColors": ["#17324D", "#2F6B9A", "#4E8FBF", "#6FA8C9", "#A7C7D9", "#D8E5EC"],
+  "background": "#F7F9FB",
+  "foreground": "#17324D",
+  "tableAccent": "#2F6B9A"
+}
